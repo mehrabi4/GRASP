@@ -1,14 +1,22 @@
 function [reject_finite,reject_asym,p_val_finite,p_val_asym]=GRASP(X,Y,heta_val,tau,alpha, f_div,L)
 
-%my_GOF return p_values (finite and asymptoticly valid) for the null hypothesis ref{.}
+%GRASP return p_values (finite and asymptoticly valid) for the null hypothesis.
 %Inputs: 
 %X: feature matrix with size n by p (n=#samples and p = #features)
 %Y: Binary response values of size n. 
 %heta_val= Output of test model heta on features X. 
+%tau: the tau value in the hypothesis testing problem
+%alpha: predetermined significance level 
+%f_div: the f-divergence function. It can be "H" (Hellinger distance), "kl" (kl-divergence, or "tv" (total variation).
+%L: number of labels for statistics V_{n,L}
+
 
 %Outputs:
-%finite sample and asymptotic valid p-values. 
-%tau_min: the one-sided CI valid of probability larger than 1-\alpha
+% p_val_finite: a p-value for the hypothesis testing problem which is valid in finite-sample regime.
+%p_val_asym:  a p-value for the hypothesis testing problem which is valid in asymptotic regime.
+%reject_finie: rejection status based on p_val_finite atsignificance level alpha.
+%reject_asym: rejection status based on p_val_asym at significance level alpha.
+
 if ~exist('alpha','var'), alpha=0.1; end
 if ~exist('L','var'), L=50; end
 if ~exist('f_div','var'), f_div="tv"; end
