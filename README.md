@@ -3,6 +3,11 @@ This repository contains MATLAB and Python implementation of a general goodness-
 # Overview
 The Performance of classifiers is often measured in terms of average accuracy on test data. Despite being a standard measure, average accuracy fails in characterizing the fit of the model to the underlying conditional law of labels given the features vector (Y|X), e.g. due to model misspecification, over/under fitting, and high-dimensionality. Here, we consider the fundamental problem of assessing the goodness-of-fit for a general binary classifier. Our framework does not make any parametric assumption on the conditional law $Y|X$, and treats that as a black box oracle model which can be accessed only through queries. We formulate the goodness-of-fit assessment problem as a tolerance hypothesis testing of the form
 
+\begin{equation*}
+H_0:\mathbb{E}\left[ D_f\Big(\mathsf{Bern}(\heta(x)) \| \mathsf{Bern}(\eta(X)) \Big) \right]
+\end{equation*}
+
+
 ```math
 H_0:\mathbb{E}\left[ D_f\Big(\mathsf{Bern}(\heta(x)) \| \mathsf{Bern}(\eta(X)) \Big) \right]
 ```
