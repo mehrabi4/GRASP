@@ -13,18 +13,35 @@ where $D_f$ represents an f-divergence function, and $\eta(x)$, $\widehat{\eta}(
 Script "GRASP.m" contains the main function GRASP for computing pvalues (two for finite-sample and asymptotoic regime) for the main hypothesis testing problem. This is for the distribution-free setting, and the main function has the following input arguments:
 
 **X**: feature matrix with size n by p  (n=#samples and p = #features)
+
 **Y**: Binary response values of size n. 
+
+
 **heta_val**= Output of test model heta on features X. 
+
+
 **tau**: the tau value in the hypothesis testing problem
+
+
 **alpha**: predetermined significance level 
+
+
 **f_div**: the f-divergence function. It can be "H" (Hellinger distance), "kl" (kl-divergence, or "tv" (total variation).
+
+
 **L**: number of labels for statistics V_{n,L}
 
 
 Outputs:
 **p_val_finite**: a p-value for the hypothesis testing problem which is valid in finite-sample regime.
+
+
 **p_val_asym**:  a p-value for the hypothesis testing problem which is valid in asymptotic regime.
+
+
 **reject_finie**: rejection status based on p_val_finite atsignificance level alpha.
+
+
 **reject_asym**: rejection status based on p_val_asym at significance level alpha.
 
 
