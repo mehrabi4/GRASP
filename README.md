@@ -45,13 +45,13 @@ Outputs:
 **p_val_asym**:  a p-value for the hypothesis testing problem which is valid in asymptotic regime.
 
 
-**reject_finie**: rejection status based on p_val_finite atsignificance level alpha. It can be true or false
+**reject_finite**: rejection status based on p_val_finite atsignificance level alpha. It can be true or false
 
 
 **reject_asym**: rejection status based on p_val_asym at significance level alpha. It can be true or false
 
-#### Simple example ####
-Script "GRASP_example.m" is a simple example for funciton "GRASP". 
+#### Simple example ####4
+Script "GRASP_example.m" is a simple example for funciton "GRASP". It is for number of samples $n=5000$, feature dimension $d=200$, and number of labels $L=50$. 
 
 ### Model-X setting ###
 #### Agnostic score function ####
