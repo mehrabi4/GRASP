@@ -50,7 +50,7 @@ Outputs:
 
 **reject_asym**: rejection status based on p_val_asym at significance level alpha. It can be true or false
 
-#### Simple example ####4
+#### Simple example ####
 Script "GRASP_example.m" is a simple example for funciton "GRASP". It is for number of samples $n=5000$, feature dimension $d=200$, and number of labels $L=50$. 
 
 ### Model-X setting ###
