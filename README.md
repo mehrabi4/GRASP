@@ -61,7 +61,7 @@ Script "model_X_GRASP.m" is an example for implementation of the model-X GRASP p
 $$ T(x,w)=\frac{1}{2\widehat{\eta}(x)}\mathbb{1}(w\leq \widehat{\eta}(x)) + \frac{1}{2(1-\widehat{\eta}(x))}\mathbb{1}(\widehat{\eta}(x)\leq w)    $$
 #### GAN-based score function ####
 
-Script "GAN_main.impynb" is an example for model-X GRASP with a GAN-based score function.
+Script "GAN_main.ipynb" is an example for model-X GRASP with a GAN-based score function.
 
 
 
