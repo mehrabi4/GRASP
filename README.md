@@ -10,29 +10,29 @@ $$
 where $D_f$ represents an f-divergence function, and $\eta(x)$, $\widehat{\eta}(x)$ respectively denote the true and an estimate likelihood for a feature vector $x$ admitting a positive label. We propose a novel test, called GRASP for testing $H_0$, which works in finite sample settings, no matter the features (distribution-free). We also propose model-X GRASP designed for model-X settings where the joint distribution of the features vector is known. Model-X GRASP uses this distributional information to achieve better power. 
 
 ## Instructions
-Script "GRASP" contains the main function "GRASP" for computing pvalues (two pvalues for finite-sample and asymptotoic regime) for the main hypothesis testing problem. This is for the distribution-free setting and the main function accepts the following arguments:
+Script "GRASP.m" contains the main function GRASP for computing pvalues (two for finite-sample and asymptotoic regime) for the main hypothesis testing problem. This is for the distribution-free setting, and the main function has the following input arguments:
 
-X: feature matrix with size n by p  (n=#samples and p = #features)
-Y: Binary response values of size n. 
-heta_val= Output of test model heta on features X. 
-tau: the tau value in the hypothesis testing problem
-alpha: predetermined significance level 
-f_div: the f-divergence function. It can be "H" (Hellinger distance), "kl" (kl-divergence, or "tv" (total variation).
-L: number of labels for statistics V_{n,L}
+**X**: feature matrix with size n by p  (n=#samples and p = #features)
+**Y**: Binary response values of size n. 
+**heta_val**= Output of test model heta on features X. 
+**tau**: the tau value in the hypothesis testing problem
+**alpha**: predetermined significance level 
+**f_div**: the f-divergence function. It can be "H" (Hellinger distance), "kl" (kl-divergence, or "tv" (total variation).
+**L**: number of labels for statistics V_{n,L}
 
 
 Outputs:
- p_val_finite: a p-value for the hypothesis testing problem which is valid in finite-sample regime.
-p_val_asym:  a p-value for the hypothesis testing problem which is valid in asymptotic regime.
-reject_finie: rejection status based on p_val_finite atsignificance level alpha.
-reject_asym: rejection status based on p_val_asym at significance level alpha.
+**p_val_finite**: a p-value for the hypothesis testing problem which is valid in finite-sample regime.
+**p_val_asym**:  a p-value for the hypothesis testing problem which is valid in asymptotic regime.
+**reject_finie**: rejection status based on p_val_finite atsignificance level alpha.
+**reject_asym**: rejection status based on p_val_asym at significance level alpha.
 
 
-Script "GRASP_example" is a simple example for the main function "GRASP". 
+Script "GRASP_example.m" is a simple example for the main funciton "GRASP".
 
-Script "model_X_GRASP" is a simple example for model-X setting in which the distributional informaiton on covariates is used achive better power. In tnis example, the model-X GRASP is run with the agnostic score function.
+Script "model_X_GRASP.m" is an example for the model-X GRASP algorithm. In tnis example, the model-X GRASP is run with the agnostic score function.
 
-Script "GAN_main" is an example for model-X GRASP with a GAN-based score function.
+Script "GAN_main." is an example for model-X GRASP with a GAN-based score function.
 
 
 
