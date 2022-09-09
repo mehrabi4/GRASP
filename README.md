@@ -30,7 +30,7 @@ Script "GRASP.m" contains the main function GRASP. This is an implementation of 
 **alpha**: predetermined significance level $\alpha$.
 
 
-**f_div**: the f-divergence function. It can be "H" (Hellinger distance), "kl" (kl-divergence, or "tv" (total variation).
+**f_div**: the f-divergence function. It can be "H" (Hellinger distance), "kl" (kl-divergence), or "tv" (total variation).
 
 
 **L**: number of labels for statistics $V_{n,L}$
