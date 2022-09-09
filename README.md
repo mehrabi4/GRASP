@@ -14,7 +14,7 @@ where $D_f$ represents an f-divergence function, and $\eta(x)$, $\widehat{\eta}(
 ### Distribution free setting ###
 #### main function ####
 
-Script "GRASP.m" contains the main function GRASP. This is an implementation of the distribution-free GRASP with the score function $T(x,w)=w$. For the main hypothesis testing problem, it outputs two p-values--one wchich is valid for the finite-number of samples and a less conservative version which is valid in the asymptotoic regime.  This function has the following input and output arguments:
+Script "GRASP.m" contains the main function GRASP. This is an implementation of the distribution-free GRASP with the score function $T(x,w)=w$. For the main hypothesis testing problem, it outputs two p-values--one which is valid for the finite-number of samples and a less conservative version which is valid in the asymptotoic regime.  This function has the following input and output arguments:
 
 **X**: feature matrix with size n by d  (n=#samples and d =#features)
 
