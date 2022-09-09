@@ -17,6 +17,9 @@ function [reject_finite,reject_asym,p_val_finite,p_val_asym]=GRASP(X,Y,heta_val,
 %reject_finie: rejection status based on p_val_finite atsignificance level alpha.
 %reject_asym: rejection status based on p_val_asym at significance level alpha.
 
+
+
+% define default values, in case of misspecified values. 
 if ~exist('alpha','var'), alpha=0.1; end
 if ~exist('L','var'), L=50; end
 if ~exist('f_div','var'), f_div="tv"; end
@@ -29,10 +32,10 @@ reject_asym=false;
 
 [n,p]=size(X);
 tmp=unifrnd(0,1,[n,1]);
-R=2* tmp .* Y .* heta_val- Y .* heta_val-tmp .* heta_val - Y.* tmp + tmp + heta_val;        
+W=2* tmp .* Y .* heta_val- Y .* heta_val-tmp .* heta_val - Y.* tmp + tmp + heta_val;    %generating randomizations W     
 all_multi=zeros(L,1);
 for (ell = 1:L)
-  all_multi(ell)=sum( R<=(ell/L) & R>((ell-1)/L) );
+  all_multi(ell)=sum( W<=(ell/L) & W>((ell-1)/L) );
 end
 
 cvx_solve_error_flag=0;
