@@ -12,7 +12,7 @@ where $D_f$ represents an f-divergence function, and $\eta(x)$, $\widehat{\eta}(
 # Instructions
 
 ### Distribution free setting ###
-# main function #
+#### main function ####
 
 Script "GRASP.m" contains the main function GRASP. For the main hypothesis testing problem, it outputs two p-values--one wchich is valid for finite-number of samples and a less conservative one which is valid in asymptotoic regime--  This is for the distribution-free setting, and the main function has the following input arguments:
 
@@ -50,13 +50,13 @@ Outputs:
 
 **reject_asym**: rejection status based on p_val_asym at significance level alpha. It can be true or false
 
-# Simple example #
+#### Simple example ####
 Script "GRASP_example.m" is a simple example for the main funciton "GRASP". It is run with the score function $T(x,w)=x$. 
 
 ### Model-X setting ###
-# Agnostic score function #
+#### Agnostic score function ####
 Script "model_X_GRASP.m" is an example for the model-X GRASP algorithm. In tnis example, the model-X GRASP is run with the agnostic score function which is given by
-# GAN-based score function #
+#### GAN-based score function ####
 $$ T(x,w)=  $$
 
 
