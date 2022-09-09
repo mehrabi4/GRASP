@@ -12,19 +12,19 @@ where $D_f$ represents an f-divergence function, and $\eta(x)$, $\widehat{\eta}(
 # Instructions
 
 ### Distribution free setting ###
-
+# main function #
 
 Script "GRASP.m" contains the main function GRASP. For the main hypothesis testing problem, it outputs two p-values--one wchich is valid for finite-number of samples and a less conservative one which is valid in asymptotoic regime--  This is for the distribution-free setting, and the main function has the following input arguments:
 
-**X**: feature matrix with size n by p  (n=#samples and p = #features)
+**X**: feature matrix with size $n$ by $d$  ($n$=#samples and $d$ =#features)
 
-**Y**: Binary response values of size n. 
-
-
-**heta_val**= Output of test model heta on features X. 
+**Y**: binary response values of size $n$. 
 
 
-**tau**: the tau value in the hypothesis testing problem
+**heta_val**= Output of test model $widehat{\eta}$ on features $\mathbf{X}$. It is of size $n$. 
+
+
+**tau**: the $\tau$ value in the hypothesis testing problem
 
 
 **alpha**: predetermined significance level 
@@ -33,27 +33,34 @@ Script "GRASP.m" contains the main function GRASP. For the main hypothesis testi
 **f_div**: the f-divergence function. It can be "H" (Hellinger distance), "kl" (kl-divergence, or "tv" (total variation).
 
 
-**L**: number of labels for statistics V_{n,L}
+**L**: number of labels for statistics $V_{n,L}$
 
 
 Outputs:
+
+
 **p_val_finite**: a p-value for the hypothesis testing problem which is valid in finite-sample regime.
 
 
 **p_val_asym**:  a p-value for the hypothesis testing problem which is valid in asymptotic regime.
 
 
-**reject_finie**: rejection status based on p_val_finite atsignificance level alpha.
+**reject_finie**: rejection status based on p_val_finite atsignificance level alpha. It can be true or false
 
 
-**reject_asym**: rejection status based on p_val_asym at significance level alpha.
+**reject_asym**: rejection status based on p_val_asym at significance level alpha. It can be true or false
+
+# Simple example #
+Script "GRASP_example.m" is a simple example for the main funciton "GRASP". It is run with the score function $T(x,w)=x$. 
+
+### Model-X setting ###
+# Agnostic score function #
+Script "model_X_GRASP.m" is an example for the model-X GRASP algorithm. In tnis example, the model-X GRASP is run with the agnostic score function which is given by
+# GAN-based score function #
+$$ T(x,w)=  $$
 
 
-Script "GRASP_example.m" is a simple example for the main funciton "GRASP".
-
-Script "model_X_GRASP.m" is an example for the model-X GRASP algorithm. In tnis example, the model-X GRASP is run with the agnostic score function.
-
-Script "GAN_main." is an example for model-X GRASP with a GAN-based score function.
+Script "GAN_main.impynb" is an example for model-X GRASP with a GAN-based score function.
 
 
 
