@@ -9,8 +9,12 @@ $$
 
 where $D_f$ represents an f-divergence function, and $\eta(x)$, $\widehat{\eta}(x)$ respectively denote the true and an estimate likelihood for a feature vector $x$ admitting a positive label. We propose a novel test, called GRASP for testing $H_0$, which works in finite sample settings, no matter the features (distribution-free). We also propose model-X GRASP designed for model-X settings where the joint distribution of the features vector is known. Model-X GRASP uses this distributional information to achieve better power. 
 
-## Instructions
-Script "GRASP.m" contains the main function GRASP for computing pvalues (two for finite-sample and asymptotoic regime) for the main hypothesis testing problem. This is for the distribution-free setting, and the main function has the following input arguments:
+# Instructions
+
+### Distribution free setting ###
+
+
+Script "GRASP.m" contains the main function GRASP. For the main hypothesis testing problem, it outputs two p-values--one wchich is valid for finite-number of samples and a less conservative one which is valid in asymptotoic regime--  This is for the distribution-free setting, and the main function has the following input arguments:
 
 **X**: feature matrix with size n by p  (n=#samples and p = #features)
 
